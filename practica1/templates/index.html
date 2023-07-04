@@ -1,0 +1,23 @@
+
+
+{% extends 'layauts/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="home">
+    <div class="presentacion">
+        <section>
+            <h1>Guzman Ezequiel Alejandro</h1>
+            <h3>Fotografia Profesional</h3>
+            <br>
+            <p>El tesoro mas grande que se puede guardar, no es el dinero,ni joyas, ni nada material....el Tesoro mas grande es el Tiempo</p>
+            <br>
+            <p>No puedes detenerlo, pero si podemos engañarlo y volver a el cada vez que quieras...</p>
+        </section>
+    </div>
+    <div class="container-imagen-principal">
+        <img class="imagen-principal" src="{% static 'media/fotografo.jpg' %}" alt="fotografo">
+    </div>
+</div>
+{% endblock  %}

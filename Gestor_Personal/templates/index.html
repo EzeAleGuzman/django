@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de Contactos</h1>
+    <ul>
+        {% for contacto in contactos %}
+            <li>{{ contacto.name }} - {{ contacto.email }}</li>
+            <form method="get" action="{% url 'editar_contacto' contacto.id %}">
+                <button type="submit">Editar</button>
+              </form>
+            <form method="post" action="{% url 'borrar_contacto' contacto.id %}">
+                {% csrf_token %}
+                <button type="submit">Borrar</button>
+              </form>
+
+        {% endfor %}
+    </ul>
+    <h3>Añadir contacto</h3>
+    <hr>
+    <form action="{% url 'index' %}" method='POST'>
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type='submit' value='Crear Contactos'>
+    </form>
+</body>
+</html>

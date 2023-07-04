@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>simple</title>
+    </head>
+    <body>
+        <h1> hola {{name}}</h1>
+        <h3>categories</h3>
+        <ul>
+            {# hola soy un comentario #}
+        {% comment %}
+            recorremos las categorias y las pintamos 
+            si es code, la ponemos en negrita
+        {% endcomment %}
+            {% for category in categories %}
+                {% if category == 'code'%}
+                    <li><b>{{ category|upper }}</b></li>
+                {% else %}
+                    <li>{{ category }}</li>
+                    {%endif%}
+            {% endfor %}
+            <h5>Total de categorias: {{categories|length}}</h5>
+        </ul>
+
+
+    </body>
+</html>

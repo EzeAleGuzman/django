@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> elementos que contienen 'yes'  en el name </h3>
+
+    <ol>
+        {% for contain in contains %}
+        <li>{{ contain.name }}</li>
+        {% endfor %}
+    </ol>
+    
+    
+
+    <h3> elementos id <= a 15 </h3>
+
+    <ol>
+        {% for fil in filtereds %}
+        <li>{{ fil.email }}</li>
+        {% endfor %}
+    </ol>
+    
+    
+    
+    
+    
+    <h3> elementos ordenados por orden del mail </h3>
+
+    <ol>
+        {% for order in orders %}
+        <li>{{ order.email }}</li>
+        {% endfor %}
+    </ol>
+
+
+
+    <h3> offset a partir delñ 5to elementi </h3>
+
+    <ol>
+        {% for offset in offsets %}
+        <li>{{ offset.email }}</li>
+        {% endfor %}
+    </ol>
+
+
+
+    <h3> los 10 primeros resultados(limits) </h3>
+
+    <ol>
+        {% for aut in limits %}
+        <li>{{ aut.email }}</li>
+        {% endfor %}
+    </ol>
+
+
+    <h3> {{ author.email }}: {{ author }} </h3>
+
+
+    <h3>buscando a resultado de mail Tbrian63@example.com</h3>
+
+    <ul>
+        {% for elem in filtered %}
+
+        <li>{{ elem }} || </li>
+
+        {% endfor %}
+    </ul>
+
+
+
+    <h3> Todos los autores </h3>
+
+    <ul>
+            {% for author in authors %}
+            <li> {{ author.name }} ( {{ author.email }})</li>
+            {% endfor %}
+
+    </ul>
+    <h3>  Total de Authors : {{ authors|length }} </h3>
+
+</body>
+</html>

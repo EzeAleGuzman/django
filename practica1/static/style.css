@@ -1,0 +1,95 @@
+*   {
+    margin: 0;
+    padding: 0;
+}
+body {
+   
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+nav     {
+    background-color: white;
+    width: 100vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-bottom: solid 1px black;
+    
+}
+
+
+ul {
+   text-decoration: none;
+
+}
+
+ul li  {
+    display: inline;
+    margin: 0;
+}
+
+ul li a     {
+    text-decoration: none;
+    padding: 2rem;
+    margin: 1rem;
+    color: black;
+    font-size: 1.7em;
+}
+
+main  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    height: 80vh;
+    margin: 0 5rem 0 5rem;
+
+}
+
+.home {
+    margin: 8rem;
+    
+}
+
+.presentacion {
+    
+    padding: 8rem;
+}
+
+
+
+
+.imagen-principal {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjetas-muestra {
+   display: grid;
+   grid-template-columns: 33% 33% 33%;
+}
+
+.tarjeta {
+    width: 25vw;
+    margin: 0 1.5rem 3rem 1.5rem ;
+}
+
+
+
+
+
+ footer {
+   
+    height: 3rem;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 2px black;
+
+ }
